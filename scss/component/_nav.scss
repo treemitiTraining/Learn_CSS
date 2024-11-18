@@ -1,5 +1,32 @@
 nav {
     width: 100vw;
     padding: 30px 0px;
-    border: $testing-border;
+    border-bottom: $testing-border;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+
+    .navRow {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navLinks {
+        column-gap: 30px;
+
+        li a {
+            padding: 10px 20px;
+
+            &:hover {
+                border-bottom: $testing-border;
+            }
+        }
+    }
+
+    .btn {
+        $btn-type: fill;
+        @include btn($btn-type);
+    }
+
 }

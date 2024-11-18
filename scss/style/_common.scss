@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@mixin btn($btn-type) {
+    width: fit-content;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        border: 3px solid lightseagreen;
+    }
+
+    @if($btn-type ==outline) {
+        border: 1px solid lightgray;
+
+    }
+
+    @else if($btn-type ==fill) {
+        background-color: green;
+        border: none;
+        color: white;
+
+        &:hover {
+            border: 1px solid lightgray;
+            background-color: white;
+            color: black;
+        }
+    }
+
+
+
+}
+
 html,
 body,
 div,
@@ -146,28 +182,22 @@ img {
     height: auto;
 }
 
+a {
+    text-decoration: none;
+}
 
 .btn {
-    width: fit-content;
-    border: 1px solid lightgray;
-    padding: 10px 20px;
-    border-radius: 12px;
-    background-color: white;
-
-    &:hover {
-        cursor: pointer;
-    }
-
-    &:focus {
-        border: 3px solid lightseagreen;
-    }
+    $btn-type: outline;
+    @include btn($btn-type)
 }
+
+
 
 $heading-font: "DynaPuff", system-ui;
 $desc-font: "Roboto", sans-serif;
 $testing-border : 1px solid grey;
 
-*{
+* {
     font-family: $desc-font;
 }
 
@@ -179,4 +209,8 @@ h3,
 h4,
 h5 {
     font-family: $heading-font;
+}
+
+.w-50{
+    width: 50%;
 }

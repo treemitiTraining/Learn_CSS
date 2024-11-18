@@ -1,0 +1,17 @@
+header {
+    margin-top: 97px;
+    height: calc(100vh - 97px);
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__zJOFi3ef7eGRIlVWo2DKdUXKrCq8dBwtQ&s');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 50%;
+
+    .container {
+        height: 100%;
+        display: flex;
+    }
+
+    .headerAlign {
+        align-items: center;
+    }
+}
